@@ -52,29 +52,19 @@ print (resalt)
 # заданной во входном файле грядки.
 
 count_bush = int(input("Enter the number of bushes: "))
-dict_bush = {}
+bushes = []
 
-for bush in range(count_bush):
-    dict_bush[bush] = int(input("Enter a prodyctiviti: "))
-print(dict_bush)
+for num_bush in range(count_bush):
+    temp = int(input("Enter a prodyctiviti: "))
+    bushes.append(temp)
+    print(f"{num_bush}){bushes[num_bush]}")
+print()
 
 resalt = 0
-for bush in range(count_bush):
-    if bush == 0:
-        prod = dict_bush[0] + dict_bush[1] + dict_bush[3]
-        if prod > resalt:
-            resalt = prod
-    if bush == 1:
-        prod = dict_bush[1] + dict_bush[2] + dict_bush[0]
-        if prod > resalt:
-            resalt = prod
-    if bush == 2:
-        prod = dict_bush[2] + dict_bush[1] + dict_bush[3]
-        if prod > resalt:
-            resalt = prod
-    if bush == 3:
-        prod = dict_bush[3] + dict_bush[0] + dict_bush[2]
-        if prod > resalt:
-            resalt = prod
-print(resalt)
-    
+for i in range(-1, len(bushes)-1):
+    prod = bushes[i] + bushes[i-1] + bushes[i+1]
+    if prod > resalt: resalt = prod
+    print(f"{i}){bushes[i]} + {bushes[i-1]} + {bushes[i+1]}")
+    print(resalt)
+
+
