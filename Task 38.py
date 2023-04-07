@@ -15,7 +15,7 @@
 
 def select_function():
     while True:
-        command = input('Введите команду(add/read/find/del/change/q): ')
+        command = input('Введите команду(add /read /find /del /change /q): ')
         if command == 'add':
             write_file()
         elif command == 'read':
@@ -47,13 +47,8 @@ def find_file():
                 print(line)
 
 def delete_file():
-    with open(file_path,'r',encoding = 'UTF-8') as f:
-        new_list = f()
-        find_contact = input("Введите контакт на удаление: ")
-        for contact in new_list:
-            if  find_contact in new_list:
-                f.write(contact)
-    
+    with open("telephon_list.txt",'w',encoding = 'UTF-8') as f:
+        pass
             
 
 file_path = r'telephon_list.txt'
