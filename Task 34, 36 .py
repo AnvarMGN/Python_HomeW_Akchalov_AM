@@ -60,23 +60,13 @@ find_rhythm(find_phrase(poem_VP))
 # 4 8 12 16 20 24
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
-
-def print_prod_operation(func,a,b):
-    for i in range(1,a+1):
-        for j in range(1,b+1):
-            prod = func(i,j)
-            print(prod, end = ' ')
-        print()
-
-x = int(input("Введите количество строк: "))
-y = int(input("Введите количество столбцов: "))
-print_prod_operation(lambda x,y: x*y)
-
-# def print_operation_table(operation, num_rows=6, num_columns=6):
-#     for i in range(1, num_rows + 1):
-#         prod_list = []
-#         for j in range(1, num_columns + 1):
-#             prod_list.append(operation(i, j))
-#         print(prod_list)
+"""
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    for i in range(1, num_rows + 1):
+        prod_list = []
+        for j in range(1, num_columns + 1):
+            prod_list.append(operation(i, j))
+        print(prod_list)
  
-# print_operation_table(lambda x, y: x * y)
+print_operation_table(lambda x, y: x * y)
+"""
